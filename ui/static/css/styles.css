@@ -78,3 +78,32 @@ button:hover {
     font-size: 24px;
   }
 }
+
+.success-message {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.success-message h2 {
+  color: #2ecc71;
+  margin-bottom: 1rem;
+}
+
+.error {
+  color: #d84949;
+  font-size: 14px;
+  margin-top: 5px;
+  font-weight: bold;
+  display: block;
+}
+
+input.invalid,
+textarea.invalid {
+  border: 1px solid #d84949;
+  background-color: #fff0f0;
+}

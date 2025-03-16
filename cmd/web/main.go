@@ -9,12 +9,14 @@ import (
 	"os"
 	"time"
 
+	"github.com/cohune-cabbage/di/internal/data"
 	_ "github.com/lib/pq"
 )
 
 type application struct {
 	logger        *slog.Logger
 	addr          *string
+	feedback      *data.FeedbackModel
 	templateCache map[string]*template.Template
 }
 
@@ -42,6 +44,7 @@ func main() {
 	app := &application{
 		logger:        logger,
 		addr:          addr,
+		feedback:      &data.FeedbackModel{DB: db},
 		templateCache: templateCache,
 	}
 
